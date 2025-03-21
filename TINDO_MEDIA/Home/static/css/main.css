@@ -1377,11 +1377,35 @@ section,
   border-radius: 5px;
   box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
   height: 100%;
+  width: 80%; /* Adjust the width as needed */
+  padding: 10px; /* Adjust the padding as needed */
+  font-size: 14px; /* Adjust the font size as needed */
 }
 
 .team .team-member .member-img {
   position: relative;
   overflow: hidden;
+}
+
+.team .team-member .member-img img {
+  width: 100%; /* Ensure the image fits within the card */
+}
+
+.team .team-member .member-info {
+  padding: 10px; /* Adjust the padding as needed */
+}
+
+.team .team-member .member-info h4 {
+  font-weight: 700;
+  margin-bottom: 5px;
+  font-size: 16px; /* Adjust the font size as needed */
+}
+
+.team .team-member .member-info span {
+  display: block;
+  font-size: 12px; /* Adjust the font size as needed */
+  font-weight: 400;
+  color: color-mix(in srgb, var(--default-color), transparent 40%);
 }
 
 .team .team-member .social {
@@ -1707,7 +1731,7 @@ section,
 .service-details ul i {
   font-size: 20px;
   margin-right: 8px;
-  color: var(--accent-color);
+  color: var (--accent-color);
 }
 
 /*--------------------------------------------------------------
@@ -1715,4 +1739,16 @@ section,
 --------------------------------------------------------------*/
 .starter-section {
   /* Add your styles here */
+}
+
+/*--------------------------------------------------------------
+# Networks Section
+--------------------------------------------------------------*/
+.networks {
+  display: flex;
+  align-items: center;
+}
+
+.networks i {
+  margin-left: 10px; /* Adjust the spacing as needed */
 }
