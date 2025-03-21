@@ -158,8 +158,8 @@ h6 {
 }
 
 .header .logo img {
-  max-height: 36px;
-  margin-right: 8px;
+  max-height: 100px; /* Increase the max-height to make the logo larger */
+  margin-right: 6px;
 }
 
 .header .logo h1 {
@@ -473,12 +473,12 @@ h6 {
 }
 
 .footer .footer-about .logo {
-  line-height: 1;
+  line-height: 2;
   margin-bottom: 10px;
 }
 
 .footer .footer-about .logo img {
-  max-height: 40px;
+  max-height: 100px;
   margin-right: 6px;
 }
 
