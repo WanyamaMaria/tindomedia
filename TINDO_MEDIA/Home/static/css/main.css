@@ -972,7 +972,7 @@ section,
 --------------------------------------------------------------*/
 .features .features-image {
   position: relative;
-  min-height: 400px;
+  min-height: 500px;
 }
 
 .features .features-image img {
@@ -1377,7 +1377,7 @@ section,
   border-radius: 5px;
   box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
   height: 100%;
-  width: 80%; /* Adjust the width as needed */
+  width: 100%; /* Adjust the width as needed */
   padding: 10px; /* Adjust the padding as needed */
   font-size: 14px; /* Adjust the font size as needed */
 }
@@ -1392,13 +1392,15 @@ section,
 }
 
 .team .team-member .member-info {
-  padding: 10px; /* Adjust the padding as needed */
+  padding: 10px;
+   /* Adjust the padding as needed */
 }
 
 .team .team-member .member-info h4 {
   font-weight: 700;
   margin-bottom: 5px;
   font-size: 16px; /* Adjust the font size as needed */
+  color: green;
 }
 
 .team .team-member .member-info span {
@@ -1437,7 +1439,7 @@ section,
 }
 
 .team .team-member .social i {
-  font-size: 18px;
+  font-size: 5px;
   line-height: 0;
 }
 
