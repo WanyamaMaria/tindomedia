@@ -879,36 +879,57 @@
             </div>
   
             <div class="col-lg-8">
-              <form action="static/forms/contact.php" method="post" class="php-email-form" data-aos="fade-up" data-aos-delay="200">
+              <form id="contact-form" action="{% url 'contact' %}" method="post" class="php-email-form">
+                {% csrf_token %}
                 <div class="row gy-4">
-  
-                  <div class="col-md-6">
-                    <input type="text" name="name" class="form-control" placeholder="Your Name" required="">
-                  </div>
-  
-                  <div class="col-md-6 ">
-                    <input type="email" class="form-control" name="email" placeholder="Your Email" required="">
-                  </div>
-  
-                  <div class="col-md-12">
-                    <input type="text" class="form-control" name="subject" placeholder="Subject" required="">
-                  </div>
-  
-                  <div class="col-md-12">
-                    <textarea class="form-control" name="message" rows="6" placeholder="Message" required=""></textarea>
-                  </div>
-  
-                  <div class="col-md-12 text-center">
-                    <div class="loading">Loading</div>
-                    <div class="error-message"></div>
-                    <div class="sent-message">Your message has been sent. Thank you!</div>
-  
-                    <button type="submit">Send Message</button>
-                  </div>
-  
+                    <div class="col-md-6">
+                        <input type="text" name="name" class="form-control" placeholder="Your Name" required>
+                    </div>
+                    <div class="col-md-6">
+                        <input type="email" name="email" class="form-control" placeholder="Your Email" required>
+                    </div>
+                    <div class="col-md-12">
+                        <input type="text" name="subject" class="form-control" placeholder="Subject" required>
+                    </div>
+                    <div class="col-md-12">
+                        <textarea name="message" class="form-control" rows="6" placeholder="Message" required></textarea>
+                    </div>
+                    <div class="col-md-12 text-center">
+                        <button type="submit">Send Message</button>
+                    </div>
                 </div>
-              </form>
+            </form>
             </div><!-- End Contact Form -->
+
+            <script>
+              document.getElementById("contact-form").addEventListener("submit", function (event) {
+                  event.preventDefault(); // Prevent default form submission
+  
+                  const form = this;
+                  const formData = new FormData(form);
+                  const csrfToken = document.querySelector("[name=csrfmiddlewaretoken]").value;
+  
+                  fetch(form.action, {
+                      method: "POST",
+                      body: formData,
+                      headers: {
+                          "X-CSRFToken": csrfToken,
+                          "X-Requested-With": "XMLHttpRequest"
+                      }
+                  })
+                  .then(response => response.json())
+                  .then(data => {
+                      if (data.success) {
+                          form.reset(); // Reset the form on success
+                      }
+                      // No messages displayed
+                  })
+                  .catch(error => {
+                      console.error("Error:", error); // Log errors to the console (optional)
+                      // No messages displayed
+                  });
+              });
+            </script>
   
           </div>
   
