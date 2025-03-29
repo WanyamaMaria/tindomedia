@@ -1041,6 +1041,19 @@ section,
   transition: 0.3s;
 }
 
+/* .team .team-item .icon {
+  background: var(--accent-color);
+  color: var(--contrast-color);
+  margin: 0 auto;
+  width: 64px;
+  height: 64px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  transition: 0.3s;} */
+
 .services .service-item .icon i {
   font-size: 28px;
   transition: ease-in-out 0.3s;
