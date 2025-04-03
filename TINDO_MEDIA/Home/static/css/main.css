@@ -861,7 +861,7 @@ section,
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: color-mix(in srgb, var(--surface-color), transparent 10%);
+  
   width: 100%; /* Ensure the box takes up full width of its column */
   max-width: 250px; /* Increase the maximum width of the box */
   margin: 0 auto;
