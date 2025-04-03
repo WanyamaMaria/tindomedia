@@ -861,6 +861,10 @@ section,
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  background-color: color-mix(in srgb, var(--surface-color), transparent 10%);
+  width: 100%; /* Ensure the box takes up full width of its column */
+  max-width: 250px; /* Increase the maximum width of the box */
+  margin: 0 auto;
 }
 
 .hero .icon-box i {
@@ -990,7 +994,7 @@ section,
   position: absolute;
   inset: 0;
   display: block;
-  width: 100%;
+  width: 500px;
   height: 100%;
   object-fit: cover;
   z-index: 1;
@@ -1405,10 +1409,17 @@ section,
   overflow: hidden;
   border-radius: 5px;
   box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
-  height: 100%;
+  height: auto;
   width: 100%; /* Adjust the width as needed */
   padding: 10px; /* Adjust the padding as needed */
-  font-size: 14px; /* Adjust the font size as needed */
+  font-size: 14px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center; 
+  max-width: 90%; /* Reduce the width of the box */
+  margin: 0 auto;
 }
 
 .team .team-member .member-img {
@@ -1417,11 +1428,15 @@ section,
 }
 
 .team .team-member .member-img img {
-  width: 60%; /* Ensure the image fits within the card */
+  width: 50%;
+  height: auto; /* Ensure the image fits within the card */
 }
 
 .team .team-member .member-info {
   padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
    /* Adjust the padding as needed */
 }
 
